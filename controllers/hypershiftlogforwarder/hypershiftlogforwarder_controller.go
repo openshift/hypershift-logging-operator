@@ -36,6 +36,7 @@ import (
 	"github.com/openshift/hypershift-logging-operator/api/v1alpha1"
 	"github.com/openshift/hypershift-logging-operator/pkg/clusterlogforwarder"
 	"github.com/openshift/hypershift-logging-operator/pkg/consts"
+	hyperv1beta1 "github.com/openshift/hypershift/api/v1beta1"
 )
 
 var (
@@ -215,6 +216,14 @@ func (r *HyperShiftLogForwarderReconciler) Reconcile(ctx context.Context, req ct
 	}
 
 	return ctrl.Result{}, nil
+}
+
+// SetupWithManager sets up the controller with the Manager.
+func (r *HyperShiftLogForwarderReconciler) SetupWithManager(mgr ctrl.Manager) error {
+	return ctrl.NewControllerManagedBy(mgr).
+		For(&hyperv1beta1.HostedCluster{}).
+		// WithEventFilter(eventPredicates()).
+		Complete(r)
 }
 
 // ValidateInputs validates HLF inputs
