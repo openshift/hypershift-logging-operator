@@ -86,3 +86,40 @@ objects:
             name: hypershift-logging-operator
             source: hypershift-logging-operator-registry
             sourceNamespace: openshift-hypershift-logging-operator
+        ## Cluster logging operator
+        - apiVersion: operators.coreos.com/v1alpha1
+          kind: CatalogSource
+          metadata:
+            name: cluster-logging-operator-hypershift
+            namespace: openshift-logging
+          spec:
+            sourceType: grpc
+            grpcPodConfig:
+              securityContextConfig: restricted
+              nodeSelector:
+                node-role.kubernetes.io: infra
+              tolerations:
+                - effect: NoSchedule
+                  key: node-role.kubernetes.io/infra
+                  operator: Exists
+            image: quay.io/openshift-logging/cluster-logging-operator-bundle:5.8.0-hypershift.1
+            displayName: Cluster Logging Operator
+            publisher: Red Hat
+        - apiVersion: operators.coreos.com/v1alpha1
+          kind: Subscription
+          metadata:
+            name: cluster-logging
+            namespace: openshift-logging
+          spec:
+            channel: "stable"
+            name: cluster-logging
+            source: cluster-logging-operator-hypershift
+            sourceNamespace: openshift-logging
+        - apiVersion: operators.coreos.com/v1
+          kind: OperatorGroup
+          metadata:
+            name: cluster-logging
+            namespace: openshift-logging
+          spec:
+            targetNamespaces:
+            - openshift-logging
