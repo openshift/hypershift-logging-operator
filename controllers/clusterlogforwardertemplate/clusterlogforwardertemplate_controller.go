@@ -42,8 +42,9 @@ import (
 // ClusterLogForwarderTemplateReconciler reconciles a ClusterLogForwarderTemplate object
 type ClusterLogForwarderTemplateReconciler struct {
 	client.Client
-	Scheme *runtime.Scheme
-	log    logr.Logger
+	Scheme  *runtime.Scheme
+	log     logr.Logger
+	hcpList []hyperv1beta1.HostedControlPlane
 }
 
 //+kubebuilder:rbac:groups=logging.managed.openshift.io,resources=clusterlogforwardertemplates,verbs=get;list;watch;create;update;patch;delete
@@ -56,11 +57,15 @@ func (r *ClusterLogForwarderTemplateReconciler) Reconcile(
 	ctx context.Context,
 	req ctrl.Request,
 ) (ctrl.Result, error) {
+
+	var err error
 	r.log = ctrllog.FromContext(ctx).WithName("controller")
 
-	hcpList, err := hostedcluster.GetHostedControlPlanes(r.Client, ctx, false)
-	if err != nil {
-		return ctrl.Result{}, err
+	if len(r.hcpList) == 0 {
+		r.hcpList, err = hostedcluster.GetHostedControlPlanes(r.Client, ctx, false)
+		if err != nil {
+			return ctrl.Result{}, err
+		}
 	}
 
 	template := &hlov1alpha1.ClusterLogForwarderTemplate{}
@@ -89,7 +94,7 @@ func (r *ClusterLogForwarderTemplateReconciler) Reconcile(
 		}
 	}
 
-	for _, hcp := range hcpList {
+	for _, hcp := range r.hcpList {
 
 		// Declare the CLF resource in each iteration
 		clf := &loggingv1.ClusterLogForwarder{}
@@ -140,8 +145,11 @@ func (r *ClusterLogForwarderTemplateReconciler) Reconcile(
 	return ctrl.Result{}, nil
 }
 
-func (r *ClusterLogForwarderTemplateReconciler) buildClusterLogForwarder(template *hlov1alpha1.ClusterLogForwarderTemplate,
-	ns string) *loggingv1.ClusterLogForwarder {
+// buildClusterLogForwarder build ClusterLogForwarder from the ClusterLogForwarderTemplate
+func (r *ClusterLogForwarderTemplateReconciler) buildClusterLogForwarder(
+	template *hlov1alpha1.ClusterLogForwarderTemplate,
+	ns string,
+) *loggingv1.ClusterLogForwarder {
 
 	clf := &loggingv1.ClusterLogForwarder{}
 
