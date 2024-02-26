@@ -23,7 +23,7 @@ RUN make go-build
 
 # Use distroless as minimal base image to package the manager binary
 # Refer to https://github.com/GoogleContainerTools/distroless for more details
-FROM  registry.access.redhat.com/ubi8/ubi-minimal:8.9-1029
+FROM  registry.access.redhat.com/ubi8/ubi-minimal:8.9-1137
 ENV USER_UID=1001 \
     USER_NAME=hypershift-logging-operator
 
