@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/go-logr/logr v1.2.4
 	github.com/openshift/api v0.0.0-20230825144922-938af62eda38
-	github.com/openshift/cluster-logging-operator v0.0.0-20231122033438-e1612dcc95a0
+	github.com/openshift/cluster-logging-operator 756e471da1fd
 	github.com/openshift/hypershift v0.1.9
 	k8s.io/api v0.28.1
 	k8s.io/apimachinery v0.28.0
