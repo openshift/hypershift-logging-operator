@@ -273,8 +273,8 @@ github.com/openshift/api v0.0.0-20230825144922-938af62eda38 h1:zYPhKtPdgs4/cQdvn
 github.com/openshift/api v0.0.0-20230825144922-938af62eda38/go.mod h1:yimSGmjsI+XF1mr+AKBs2//fSXIOhhetHGbMlBEfXbs=
 github.com/openshift/cluster-logging-operator v0.0.0-20231122033438-e1612dcc95a0 h1:NzpQ7Pt0qqtypegHMiDIAmBaSMC17XhPN9P38sFw2Y4=
 github.com/openshift/cluster-logging-operator v0.0.0-20231122033438-e1612dcc95a0/go.mod h1:oMXS3dR3syXIkQaje6iOQU5WCk2jrAQN7UsiF/pyM7Y=
-github.com/openshift/elasticsearch-operator v0.0.0-20220613183908-e1648e67c298 h1:/CbENmI9HuJHd8N/h3eaUkqhHoQjj1BdwIGOF+X3wnM=
-github.com/openshift/elasticsearch-operator v0.0.0-20220613183908-e1648e67c298/go.mod h1:6dxhWPY3Wr/0b0eGrFpV7gcyeS+ne48Mo9OQ9dxrLNI=
+github.com/openshift/elasticsearch-operator v0.0.0-20241202183904-81cd6e70c15e h1:SANoVxnO9MDB+4YAlI376el+exJx1gY7WpRVLHJjgKQ=
+github.com/openshift/elasticsearch-operator v0.0.0-20241202183904-81cd6e70c15e/go.mod h1:MV0PMDsMJv7m9VtYmwUwS6CkfgHH/LT1ga8EGASSEF0=
 github.com/openshift/hypershift v0.1.9 h1:ziwZVurL1gTiWwQCYs7Jc0HlLS+Kn1+Te1oYAG4FCz4=
 github.com/openshift/hypershift v0.1.9/go.mod h1:rtfD/oD4/p5ZLSoCWw+R2co+Smdgfygt9puY3oo3yYI=
 github.com/peterbourgon/diskv v2.0.1+incompatible/go.mod h1:uqqh8zWWbv1HBMNONnaR/tNboyR3/BZd58JJSHlUSCU=

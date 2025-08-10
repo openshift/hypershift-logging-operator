@@ -47,7 +47,7 @@ require (
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/onsi/ginkgo/v2 v2.12.0 // indirect
 	github.com/onsi/gomega v1.27.10 // indirect
-	github.com/openshift/elasticsearch-operator v0.0.0-20220613183908-e1648e67c298 // indirect
+	github.com/openshift/elasticsearch-operator v0.0.0-20241202183904-81cd6e70c15e // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/prometheus/client_golang v1.16.0 // indirect
 	github.com/prometheus/client_model v0.4.0 // indirect
