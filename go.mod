@@ -93,7 +93,7 @@ replace (
 	// Needed by https://github.com/kubernetes-sigs/cluster-api-provider-aws/blob/v2.0.2/go.mod#L5
 	sigs.k8s.io/cluster-api => sigs.k8s.io/cluster-api v1.2.7
 	// Needed by github.com/openshift/hypershift
-	sigs.k8s.io/cluster-api-provider-kubevirt => github.com/openshift/cluster-api-provider-kubevirt v0.0.0-20211223062810-ef64d5ff1cde
+	sigs.k8s.io/cluster-api-provider-kubevirt => github.com/openshift/cluster-api-provider-kubevirt v0.0.0-20250806065636-bb01ac953bbc
 	// Needed by github.com/openshift/hypershift
 	sigs.k8s.io/controller-runtime => sigs.k8s.io/controller-runtime v0.12.3
 
