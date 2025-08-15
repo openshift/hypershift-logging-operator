@@ -25,12 +25,12 @@ spec:
   - name: output-image
     value: quay.io/redhat-user-workloads/hypershift-logging-operator-tenant/openshift/hypershift-logging-operator:{{revision}}
   - name: dockerfile
-    value: test/e2e/Dockerfile
+    value: Dockerfile
   - name: path-context
     value: .
   - name: build-args
     value:
-      - BASE_IMAGE=brew.registry.redhat.io/rh-osbs/openshift-golang-builder:rhel_9_1.24
+      - BASE_IMAGE=quay.io/redhat-services-prod/openshift/boilerplate:image-v7.4.0
   pipelineSpec:
     description: |
       This pipeline is ideal for building container images from a Containerfile while maintaining trust after pipeline customization.
@@ -101,7 +101,7 @@ spec:
       name: build-image-index
       type: string
     - default:
-        - BASE_IMAGE=brew.registry.redhat.io/rh-osbs/openshift-golang-builder:rhel_9_1.24
+        - BASE_IMAGE=quay.io/redhat-services-prod/openshift/boilerplate:image-v7.4.0
       description: Array of --build-arg values ("arg=value" strings) for buildah
       name: build-args
       type: array
