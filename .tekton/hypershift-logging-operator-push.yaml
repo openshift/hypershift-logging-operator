@@ -25,7 +25,7 @@ spec:
   - name: output-image
     value: quay.io/redhat-user-workloads/hypershift-logging-operator-tenant/openshift/hypershift-logging-operator:{{revision}}
   - name: dockerfile
-    value: Dockerfile
+    value: build/Dockerfile
   - name: path-context
     value: .
   - name: build-args
