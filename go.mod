@@ -3,7 +3,7 @@ module github.com/openshift/hypershift-logging-operator
 go 1.19
 
 require (
-	github.com/go-logr/logr v1.2.4
+	github.com/go-logr/logr v1.4.1
 	github.com/openshift/api v0.0.0-20230825144922-938af62eda38
 	github.com/openshift/cluster-logging-operator v0.0.0-20231122033438-e1612dcc95a0
 	github.com/openshift/hypershift v0.1.9
@@ -72,7 +72,7 @@ require (
 	k8s.io/apiextensions-apiserver v0.28.0 // indirect
 	k8s.io/apiserver v0.28.0 // indirect
 	k8s.io/component-base v0.28.0 // indirect
-	k8s.io/klog/v2 v2.100.1 // indirect
+	k8s.io/klog/v2 v2.130.1 // indirect
 	k8s.io/utils v0.0.0-20230726121419-3b25d923346b // indirect
 	sigs.k8s.io/cluster-api v1.2.10 // indirect
 	sigs.k8s.io/cluster-api-provider-aws/v2 v2.0.2 // indirect
