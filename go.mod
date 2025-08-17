@@ -3,7 +3,7 @@ module github.com/openshift/hypershift-logging-operator
 go 1.19
 
 require (
-	github.com/go-logr/logr v1.2.4
+	github.com/go-logr/logr v1.4.3
 	github.com/openshift/api v0.0.0-20230825144922-938af62eda38
 	github.com/openshift/cluster-logging-operator v0.0.0-20231122033438-e1612dcc95a0
 	github.com/openshift/hypershift v0.1.9
