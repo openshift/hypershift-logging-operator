@@ -74,7 +74,7 @@ require (
 	k8s.io/component-base v0.28.0 // indirect
 	k8s.io/klog/v2 v2.100.1 // indirect
 	k8s.io/utils v0.0.0-20230726121419-3b25d923346b // indirect
-	sigs.k8s.io/cluster-api v1.2.10 // indirect
+	sigs.k8s.io/cluster-api v1.11.0 // indirect
 	sigs.k8s.io/cluster-api-provider-aws/v2 v2.0.2 // indirect
 	sigs.k8s.io/cluster-api-provider-ibmcloud v0.2.4 // indirect
 	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd // indirect
@@ -91,7 +91,7 @@ replace (
 	//Needed by issue https://github.com/kubernetes/client-go/issues/1075
 	k8s.io/kube-openapi => k8s.io/kube-openapi v0.0.0-20221012153701-172d655c2280
 	// Needed by https://github.com/kubernetes-sigs/cluster-api-provider-aws/blob/v2.0.2/go.mod#L5
-	sigs.k8s.io/cluster-api => sigs.k8s.io/cluster-api v1.2.7
+	sigs.k8s.io/cluster-api => sigs.k8s.io/cluster-api v1.11.0
 	// Needed by github.com/openshift/hypershift
 	sigs.k8s.io/cluster-api-provider-kubevirt => github.com/openshift/cluster-api-provider-kubevirt v0.0.0-20211223062810-ef64d5ff1cde
 	// Needed by github.com/openshift/hypershift
