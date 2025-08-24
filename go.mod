@@ -1,6 +1,8 @@
 module github.com/openshift/hypershift-logging-operator
 
-go 1.19
+go 1.23
+
+toolchain go1.24.6
 
 require (
 	github.com/go-logr/logr v1.2.4
@@ -77,7 +79,7 @@ require (
 	sigs.k8s.io/cluster-api v1.2.10 // indirect
 	sigs.k8s.io/cluster-api-provider-aws/v2 v2.0.2 // indirect
 	sigs.k8s.io/cluster-api-provider-ibmcloud v0.2.4 // indirect
-	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd // indirect
+	sigs.k8s.io/json v0.0.0-20250730193827-2d320260d730 // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.3 // indirect
 	sigs.k8s.io/yaml v1.3.0 // indirect
 )
